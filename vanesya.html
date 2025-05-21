@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Vanesya Vildany</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: linear-gradient(to right, #ffc0cb, #ffe4e1);
+        font-family: "Georgia", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .letter-container {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 600px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+        position: relative;
+        z-index: 2;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        color: #e91e63;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #444;
+      }
+
+      .signature {
+        margin-top: 30px;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: #888;
+      }
+
+      .falling-heart {
+        position: fixed;
+        top: -10px;
+        color: #e91e63;
+        animation: fall 5s linear infinite;
+        z-index: 1;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-100px) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="letter-container">
+      <h1>Dear Vanesya Vildany,</h1>
+      <p>
+        Setiap hari bersamamu adalah anugerah yang tidak bisa tergantikan.<br />
+        Senyumanmu, perhatianmu, dan cintamu adalah hal terindah dalam
+        hidupku.<br /><br />
+
+        Aku bersyukur bisa mengenalmu, menyayangimu, dan mencintaimu sepenuh
+        hati.<br />
+        Kamu adalah alasan aku percaya pada keajaiban cinta.<br /><br />
+
+        Terima kasih telah menjadi bagian dari hidupku, Vanesya.<br />
+        Aku mencintaimu hari ini, esok, dan selamanya.
+      </p>
+      <div class="signature">With all my love,<br />Your Boyfriend 💖</div>
+    </div>
+
+    <!-- Falling hearts -->
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "falling-heart";
+        heart.innerHTML = "💗";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 20 + "px";
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+      }
+
+      setInterval(createHeart, 300);
+    </script>
+  </body>
+</html>
